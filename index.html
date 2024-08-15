@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1 class="header_text">Pwede bang pakopya ng assignment mo</h1>
+            <h1 class="header_text">Please😭💔</h1>
+        </div>
+        <div class="gif_container">
+            <img src="https://media.giphy.com/media/3orieOikLoXuDCLmQ8/giphy.gif?cid=790b76115pfe7fcuos1uf36ozrc7r5zxp46l9wqd4ovcgy62&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+                alt="funny gif">
+        </div>
+        <div class="buttons">
+            <button class="btn" id="yesButton" onclick="changeButtonText()">Sige</button>
+            <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">Ayoko</button>
+            <script>
+                function nextPage() {
+                    window.location.href = "yes.html";
+                }
+
+                function moveButton() {
+                    var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                    var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                    document.getElementById('noButton').style.left = `${x}px`;
+                    document.getElementById('noButton').style.top = `${y}px`;
+                }
+
+                function changeButtonText() {
+                    document.getElementById('yesButton').textContent = "Sige!";
+                    nextPage();
+                }
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>
